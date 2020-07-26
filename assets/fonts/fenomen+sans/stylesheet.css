@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-Black.woff2') format('woff2'),
+        url('FenomenSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-Bold.woff2') format('woff2'),
+        url('FenomenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-LightItalic.woff2') format('woff2'),
+        url('FenomenSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-Regular.woff2') format('woff2'),
+        url('FenomenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans Book';
+    src: url('FenomenSans-BookItalic.woff2') format('woff2'),
+        url('FenomenSans-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-Italic.woff2') format('woff2'),
+        url('FenomenSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans Book';
+    src: url('FenomenSans-Book.woff2') format('woff2'),
+        url('FenomenSans-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-BlackItalic.woff2') format('woff2'),
+        url('FenomenSans-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-Light.woff2') format('woff2'),
+        url('FenomenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-Thin.woff2') format('woff2'),
+        url('FenomenSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fenomen Sans';
+    src: url('FenomenSans-BoldItalic.woff2') format('woff2'),
+        url('FenomenSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

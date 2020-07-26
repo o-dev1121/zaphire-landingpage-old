@@ -1,0 +1,230 @@
+footer {
+  background: #161544;
+  padding: 80px 0;
+  position: relative;
+
+  .footer-light-bg {
+    width: 45%;
+    opacity: 1 !important;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: rgba($white, 0.05);
+    @include transition(.5s);
+    .footer-logo {
+      max-width: 100%;
+      position: absolute;
+      right: 0;
+      width: 200px;
+      transform: translateX(94px);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  h4 {
+    font-size: em(36);
+    color: $white;
+    font-weight: 700;
+    margin: 0 0 em(30, 34);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      color: rgba($white, 0.5);
+      margin: 0 0 20px;
+      font-style: normal;
+      font-size: em(18);
+      line-height: 100%;
+      transition: color ease .25s;
+
+      a {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 21px;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      &:last-child {
+        margin: 0px;
+      }
+    }
+  }
+
+  h6 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: .875rem;
+    line-height: 100%;
+    color: $white;
+    margin: 0 0 24px;
+  }
+
+  .emailupd-mn {
+    position: relative;
+
+    input {
+      -webkit-appearance: none;
+      @include borderRadius(0);
+      box-shadow: 0 0 0 #000;
+      width: 100%;
+      padding: 16px 0;
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid #FFF;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 24px;
+      color: #FFFFFF;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      border: 0;
+      background: transparent;
+    }
+  }
+}
+
+.footer-mob-logo {
+  display: none;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  footer {
+    ul {
+      li {
+        margin: 0 0 14px;
+      }
+    }
+
+    img {
+      max-width: 120px;
+    }
+  }
+
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 1200px) {
+  footer{
+    .footer-light-bg{
+      width: 3px;
+      .footer-logo{
+        opacity: 0;
+        @include transition(.25s);
+        transition-delay: .5s;
+      }
+      &.footer-bg-anim{
+        width: 45%;
+        .footer-logo{
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767px) {
+
+  footer {
+    padding-top: 0;
+
+    .footer-light-bg {
+      display: none;
+    }
+
+    .first-half {
+      padding-top: 30px !important;
+      padding-bottom: 80px !important;
+      background: rgba($white, 0.05);
+    }
+
+    h4 {
+      font-size: 1.625rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    h6 {
+      color: $white;
+      margin: 30px 0 20px;
+    }
+
+    ul {
+      margin: 30px 0 0;
+      font-size: em(16);
+
+      li {
+        margin: 20px 0;
+        font-size: 1rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .emailupd-mn {
+      input {
+        font-size: 16px;
+        padding: 13px 0;
+        min-height: 60px;
+      }
+
+      button {
+        img {
+          max-width: 22px;
+          position: relative;
+          top: -3px;
+        }
+      }
+    }
+  }
+
+  .footer-logo {
+    display: none;
+  }
+  .mob-spacer{
+    padding-bottom: 80px !important;
+  }
+  .footer-mob-logo {
+    display: block;
+    //transform: rotate(90deg) translateY(-50%);
+    width: 112px;
+    height: 83px;
+    margin: 0;
+    position: absolute;
+    right: 50px;
+    top: -38px;
+  }
+}

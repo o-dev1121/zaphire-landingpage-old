@@ -1,0 +1,120 @@
+.main-banner{
+  background: url("../svgs/menu-bg.svg");
+  background-size: cover;
+  background-position: bottom center;
+  //min-height: 100vh;
+  padding: em(45) 0 em(60);
+  position: relative;
+  overflow: hidden;
+  h1{
+    color: $white;
+    font-size: em(49);
+    /* Making it easy for your value to be seen. */
+  }
+  p{
+    //font-weight: 500;
+    font-size: em(24);
+    line-height: 1.54;
+    color: #FFFFFF;
+    opacity: 0.6;
+    width: 83%;
+    margin-bottom: em(30);
+  }
+  /*.wave-mn{
+    	position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    	.wave-1 {
+  	    width: 5760px;
+  	    height: 100%;
+  	    position: absolute;
+  	    top: 0;
+  	    background: url("../svgs/banner-svg-1.svg") repeat-x bottom;
+  	    animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  	    transform: translate3d(0, 0, 0);
+  	}
+  	.wave-2 {
+  	    width: 5760px;
+  	    height: 100%;
+  	    position: absolute;
+  	    top: 0;
+  	    background: url("../svgs/banner-svg-2.svg") repeat-x bottom;
+  	    animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite 1s, swell 7s ease -1.25s infinite;
+  	    transform: translate3d(0, 0, 0);
+  	}
+  	.wave-3 {
+  	    width: 5760px;
+  	    height: 100%;
+  	    position: absolute;
+  	    top: 0;
+  	    background: url("../svgs/banner-svg-3.svg") repeat-x bottom;
+  	    animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite 1.5s, swell 7s ease -2s infinite;
+  	    transform: translate3d(0, 0, 0);
+  	}
+  	.wave-4 {
+  	    width: 5760px;
+  	    height: 100%;
+  	    position: absolute;
+  	    top: 0;
+  	    opacity: 0.47;
+  	    background: url("../svgs/banner-svg-4.svg") repeat-x bottom;
+  	    animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite 1.2s, swell 7s ease -1s infinite;
+  	    transform: translate3d(0, 0, 0);
+  	}
+  }*/
+}
+
+.ie11{
+  .main-banner{
+    padding: 170px 0;
+  }
+}
+
+.banner-video{
+  margin: 0 em(40);
+  max-height: em(585);
+  border-radius: em(30);
+  position: relative;
+  left: em(-20);
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1440px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767px) {
+
+.main-banner {
+    padding: 120px 0;
+    text-align: center;
+    h1 {
+      font-size: em(40);
+    }
+    p {
+      width: 100%;
+    }
+    .banner-video {
+      margin: 40px 0 0;
+      left: em(0);
+    }
+}
+
+}

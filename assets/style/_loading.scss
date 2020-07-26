@@ -1,0 +1,441 @@
+.form-wrapper {
+  position: relative;
+  padding-bottom: em(15);
+  padding-left: em(5);
+
+  .thanks {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: $grey;
+    text-align: center;
+
+    .thanks-inner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 110px;
+      width: 100%;
+      margin: auto 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      h4 {
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .loading {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      background: $grey;
+    }
+
+    .contact-us-form {
+      padding-left: em(10) !important;
+    }
+  }
+
+  .loader {
+    min-width: 100px;
+    padding-top: 60px;
+    color: #fff;
+    width: auto !important;
+    height: auto !important;
+    text-align: center;
+    font-style: normal;
+    display: block;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    z-index: 1000;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.66);
+    }
+
+    &:after {
+      content: '';
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      -webkit-animation: loader .6s linear;
+      animation: loader .6s linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      border-radius: 500rem;
+      border-color: $primary transparent transparent;
+      border-style: solid;
+      border-width: .2em;
+      box-shadow: 0 0 0 1px transparent;
+    }
+  }
+
+  .form-control-feedback {
+    right: 1px;
+  }
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes loader {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: em(50);
+
+  .help-block {
+    position: absolute;
+    left: em(25);
+    bottom: em(-30);
+    font-size: em(16);
+    color: $primary;
+  }
+
+  &.has-error {
+    .form-control {
+      border-color: #ff283f;
+      color: #ff283f;
+    }
+
+    .bootstrap-select {
+      border-color: #ff283f;
+
+      > .dropdown-toggle {
+        color: #ff283f;
+      }
+    }
+  }
+
+  &.has-success {
+    .form-control {
+      border-color: green;
+      color: green;
+    }
+
+    .bootstrap-select {
+      border-color: green;
+
+      > .dropdown-toggle {
+        color: green;
+      }
+    }
+  }
+
+
+}
+
+.text-field {
+  border: solid 1px #707070;
+  overflow: hidden;
+  height: em(300);
+  position: relative;
+
+  .autogrow-mirror {
+    position: absolute;
+    top: 0;
+  }
+
+  textarea {
+    border: 0;
+    @include borderRadius(0px);
+    resize: none;
+    height: em(80);
+
+    &:focus {
+      -webkit-box-shadow: 0 0 0 #000;
+      -moz-box-shadow: 0 0 0 #000;
+      box-shadow: 0 0 0 #000;
+      border: 0;
+    }
+  }
+
+  .scrollbar-track-y {
+    opacity: 1 !important;
+    right: em(16);
+  }
+}
+
+.form-control {
+  padding: em(8) em(20);
+  border: solid 1px #707070;
+  background: none;
+  color: $white;
+  font-size: em(30);
+  height: em(43);
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none !important;
+    text-shadow: 0 0 0 transparent !important;
+    -webkit-box-shadow: 0 0 0 #000 !important;
+    -moz-box-shadow: 0 0 0 #000 !important;
+    box-shadow: 0 0 0 #000 !important;
+    background: none;
+    color: $white;
+    border-color: #707070;
+  }
+}
+
+
+.bootstrap-select {
+  border: 1px solid $input-border-color;
+  @include borderRadius(0px);
+  background: none;
+  width: 100%;
+
+  > .dropdown-toggle {
+    color: $white;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    font-size: em(30);
+    height: em(42);
+    padding: em(8) em(20);
+    position: relative;
+    @include borderRadius(0px);
+    background: none;
+
+    &[aria-expanded="true"] {
+      &:after {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+
+    .filter-option {
+      height: auto;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    border-radius: 0;
+
+    li {
+      a {
+        padding: em(8) em(20) em(11);
+        font-size: em(18);
+        @include transitions(0.5s);
+
+        &:hover {
+          background: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-menu.show {
+  max-height: em(300) !important;
+  overflow: hidden;
+
+  .inner {
+    height: 100% !important;
+    max-height: em(300) !important;
+    overflow: hidden !important;
+
+    .dropdown-menu {
+      max-height: none !important;
+    }
+  }
+}
+
+.bootstrap-select {
+  &:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+  }
+
+  .btn-light:not(:disabled):not(.disabled):active,
+  .btn-light:not(:disabled):not(.disabled).active,
+  &.show > .btn-light.dropdown-toggle {
+    background: transparent;
+    border-color: transparent;
+    color: $white;
+  }
+}
+
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle,
+.bootstrap-select .dropdown-toggle:focus {
+  outline: none;
+  outline: none !important;
+  outline-offset: 0;
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .scroll-content {
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+  .scroll-content {
+    overflow: hidden;
+  }
+  .text-field {
+    textarea {
+      overflow-y: scroll;
+      height: em(300) !important;
+    }
+  }
+}
+
+
+// Laptops large devices (desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1699.98px) {
+}
+
+// Laptops large devices (desktops, 1400px and up)
+@media (min-width: 1400px) and (max-width: 1599.98px) {
+}
+
+// Laptops small devices (desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .form-group {
+    &.text-field {
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .form-group {
+    &.text-field {
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .form-group {
+    &.text-field {
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+  .dropdown-menu {
+    &.show {
+      .inner {
+        .dropdown-menu {
+          max-height: em(300) !important;
+          overflow-y: scroll !important;
+        }
+      }
+    }
+  }
+  .text-field {
+    textarea {
+      height: 100%;
+      overflow-y: scroll;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .form-group {
+    &.text-field {
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+  .dropdown-menu {
+    &.show {
+      .inner {
+        .dropdown-menu {
+          max-height: em(300) !important;
+          overflow-y: scroll !important;
+        }
+      }
+    }
+  }
+  .text-field {
+    textarea {
+      height: 100%;
+      overflow-y: scroll;
+    }
+  }
+}
+

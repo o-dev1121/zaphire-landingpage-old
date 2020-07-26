@@ -1,0 +1,138 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+/* -------Start Of Website Color Branding-------- */
+
+$primary: #29AFC6;
+$info: #cf254a;
+$warning: #E2B624;
+$success: #93C12B;
+$pink: #CC35D9;
+$purple: #9055FF;
+$yellow: #EFA500;
+$blue: #5191DB;
+$cyan: #00A3B0;
+$maroon: #B15169;
+$grey: #242423;
+$lightgrey: #f7f7f7;
+$white: #ffffff;
+$black: #000000;
+
+/* -------End Of Website Color Branding-------- */
+
+/* -------begin customization-------- */
+$body-bg: $white;
+$body-color: $grey;
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+                (
+                        "primary": $primary,
+                        "info": $info,
+                        "warning": $warning,
+                        "success": $success,
+                        "pink": $pink,
+                        "purple": $purple,
+                        "yellow": $yellow,
+                        "blue": $blue,
+                        "cyan": $cyan,
+                        "maroon": $maroon,
+                        "white": $white,
+                        "black": $black,
+                        "grey": $grey
+                ),
+                $theme-colors
+);
+
+
+$font-family-base: 'Poppins', sans-serif;
+//$font-family-base: $gilroy;
+$headings-font-family: 'Poppins', sans-serif;
+//$headings-font-family: $gilroy;
+$line-height-base: 1.33;
+$font-size-base: 16;
+$headings-color: $black;
+
+$slick-font-path: "../fonts/";
+$slick-loader-path: "../images/";
+
+$h1-font-size: em(53);
+$h2-font-size: em(38);
+$h3-font-size: em(54);
+$h4-font-size: em(28);
+$h5-font-size: em(34);
+$h6-font-size: em(28);
+$lead-font-size: em(24);
+$headings-margin-bottom: 0px;
+
+
+$hr-margin-y: 0;
+$hr-margin-y: 0;
+$hr-border-width: 0;
+$hr-border-color: transparent;
+$link-hover-color: inherit;
+$link-color: inherit;
+$btn-border-radius: 30px;
+$btn-padding-y: 0px;
+$btn-padding-x: 0px;
+$card-border-radius: 0px;
+
+
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-bg: #f0f0f0;
+$breadcrumb-font-size: 16px;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-active-color: $info;
+$breadcrumb-border-radius: 0;
+$breadcrumb-item-padding: em(15);
+$breadcrumb-divider-color: $grey;
+$breadcrumb-divider: "\63";
+
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+$custom-checkbox-indicator-icon-checked: none;
+$custom-checkbox-indicator-icon-indeterminate: none;
+$custom-radio-indicator-icon-checked: none;
+$carousel-control-next-icon-bg: none;
+$carousel-control-prev-icon-bg: none;
+$form-feedback-icon-valid: none;
+$custom-select-indicator: none;
+$form-feedback-icon-invalid: none;
+
+$input-color: $headings-color !default;
+$input-border: rgba(0, 0, 0, 0) !default;
+$input-border-radius: 0;
+$input-color-placeholder: #888B89 !default;
+$input-border-color: #707070;
+
+$card-border-color: transparent;
+$card-border-radius: 0px;
+$card-border-width: 0px;
+$card-img-overlay-padding: em(70);
+
+::-moz-selection {
+  background: rgba($primary, 0.23);
+}
+
+::selection {
+  background: rgba($primary, 0.23);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $input-color-placeholder;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $input-color-placeholder;
+  font-weight: 400;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $input-color-placeholder;
+  font-weight: 400;
+}

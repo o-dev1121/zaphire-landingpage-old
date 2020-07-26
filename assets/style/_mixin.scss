@@ -1,0 +1,73 @@
+@mixin transitions($speed: 0.5s, $easing: ease-in-out) {
+  -webkit-transition: all $speed $easing;
+  -moz-transition: all $speed $easing;
+  -o-transition: all $speed $easing;
+  transition: all $speed $easing;
+}
+
+@mixin transforms($transformvalue){
+  -webkit-transform: $transformvalue;
+  -moz-transform: $transformvalue;
+  -ms-transform: $transformvalue;
+  -o-transform: $transformvalue;
+  transform: $transformvalue;
+}
+
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+$num: 100;
+@while $num > 0 {
+  .w-#{$num} {
+    width: unquote( $num + '%' ) !important;
+  }
+  $num: $num - 5;
+}
+
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// Laptops large devices (desktops, 1400px and up)
+@media (min-width: 1400px) and (max-width: 1599.98px) {
+}
+
+// Laptops small devices (desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767px) {
+}
