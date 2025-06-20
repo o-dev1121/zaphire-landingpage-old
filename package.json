@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.3.7",
     "bootstrap-select": "^1.13.17",
     "bootstrap-v4-rtl": "^4.4.1-2",
     "css-browser-selector": "^0.6.5",
